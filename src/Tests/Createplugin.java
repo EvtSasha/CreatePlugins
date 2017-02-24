@@ -48,9 +48,10 @@ public class Createplugin extends BaseTest {
     public void createjira() throws InterruptedException {
         LoginPage login = new LoginPage();
         login.login(driver, "alex.yevtushenko@thinkmobiles.com", "qwerasd1995");
-        Integration integrationplus = new Integration();
-        integrationplus.addIntegration(driver);
-        Jira.addJira(driver);
+        Integration jiraplus = new Integration();
+        jiraplus.addIntegration(driver);
+        Jira jira = new Jira();
+        jira.addJira(driver);
         driver.findElement(By.className("plans-item-inner-left")).isDisplayed();
     }
 
