@@ -1,5 +1,7 @@
 package Tests;
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -18,8 +20,8 @@ public class BaseTest {
         public void SetUp() {
             System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
             driver = new ChromeDriver();
-            driver.manage().window().maximize();
             driver.get(baseUrl);
+            driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         }
 
